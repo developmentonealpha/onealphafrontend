@@ -49,10 +49,7 @@ const strategies: Strategy[] = [
     description:
       "Uncovering future asset relationships beyond historical patterns",
     subMedia: [
-      {
-        type: "image",
-        url: "Statistical_Arbitrage.jpg",
-      },
+      { type: "video", url: "https://www.youtube.com/embed/pjvynxCcdiE" },
     ],
     media: [
       { type: "image", url: "/stat-arbitrage.png" },
@@ -190,13 +187,24 @@ const Works = () => {
               className="relative h-[100vh] lg:h-[90vh] touch-pan-y"
             >
               <div className="h-full w-full flex items-center justify-center">
-                {currentStrategy.subMedia[currentMediaIndex].type ===
-                "video" ? (
-                  <video
-                    src={currentStrategy.subMedia[currentMediaIndex].url}
-                    className="w-full h-full object-contain"
-                    controls
-                  />
+                {/* CHANGE: YouTube Video Handling */}
+                {currentStrategy.subMedia[currentMediaIndex].type === "video" ? (
+                  currentStrategy.subMedia[currentMediaIndex].url.includes("youtube.com") ? (
+                    <iframe
+                      className="w-full h-full object-contain"
+                      src={currentStrategy.subMedia[currentMediaIndex].url}
+                      title="YouTube Video"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  ) : (
+                    <video
+                      src={currentStrategy.subMedia[currentMediaIndex].url}
+                      className="w-full h-full object-contain"
+                      controls
+                    />
+                  )
                 ) : (
                   <img
                     src={
