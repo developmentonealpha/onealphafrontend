@@ -6,8 +6,10 @@ const articles = [
   {
     title: "Trading Strategy 1",
     content:
-      "Learn about our sophisticated trading approaches and market analysis techniques. Our quantitative strategies combine mathematical models with market insights to deliver consistent results.",
-    image: "/people.jpg",
+      "UPLOADING SOON.......",
+    // content:
+    //   "Learn about our sophisticated trading approaches and market analysis techniques. Our quantitative strategies combine mathematical models with market insights to deliver consistent results.",
+    // image: "/people.jpg",
   },
   // {
   //   title: "Trading Strategy 2",
