@@ -93,7 +93,7 @@ const Comparison = () => {
             {wholeData?.comparisonSummary}
           </p>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 ">
+          <div className="grid grid-cols-3 lg:grid-cols-6 md:grid-cols-3 sm:grid-cols-3 gap-4 p-1">
             {wholeData?.compareStats?.map((comparison) => (
               <Card key={comparison.label} className="glass-card">
                 <CardContent className="p-2 sm:p-6">
